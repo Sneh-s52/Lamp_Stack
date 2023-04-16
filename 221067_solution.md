@@ -8,6 +8,8 @@ Rename this file in the format `yourRollNumber_solution.md` (example, `220000_so
 
 Reasoning - I just simply ran the C file and made the correction with unsigned and char**. The output came on the debug console in vs code - "The answer of this challenge is output of "man" when run on the terminal, copy the exact output"
 
+````
+```
 Unknown locale, assuming C
 This manpage is not compatible with mandoc(1) and might display incorrectly.
 
@@ -25,7 +27,7 @@ This manpage is not compatible with mandoc(1) and might display incorrectly.
 #ifdef __APPLE__    *.gz)     cattool='/usr/bin/zcat -f' ;; #else #   *.gz)     cattool='/usr/bin/zcat' ;; #  *.lzma)   cattool='/usr/bin/lzcat' ;; # *.xz)     cattool='/usr/bin/xzcat' ;; #endif      *)
      cattool='/usr/bin/zcat -f' ;;      esac }
 
-# Usage: setup_pager # Correctly sets $MANPAGER setup_pager() {  # Setup pager.      if [ -z "$MANPAGER" ]; then        if [ -n "$MANCOLOR" ]; then             MANPAGER="less -sR"           else
+ Usage: setup_pager # Correctly sets $MANPAGER setup_pager() {  # Setup pager.      if [ -z "$MANPAGER" ]; then        if [ -n "$MANCOLOR" ]; then             MANPAGER="less -sR"           else
                if [ -n "$PAGER" ]; then                     MANPAGER="$PAGER"             else                     MANPAGER="less -s"            fi        fi   fi #ifdef __APPLE__      # whatis/apropos
 have historically used more(1) on Apple systems,  if [ -z "$WHATISPAGER" ]; then          if [ -n "$MANCOLOR" ]; then             WHATISPAGER="more -ER"        else                if [ -n "$PAGER" ];
 then                     WHATISPAGER="$PAGER"               else                     WHATISPAGER="more -E"              fi        fi   fi #endif      decho "Using pager: $MANPAGER" }
@@ -71,6 +73,9 @@ config_global='/etc/man.conf'
 # Set noglobbing for now. I don't want spurious globbing.  set -f
 
 case "$0" in *apropos)   do_apropos "$@" ;; *manpath)  do_manpath "$@" ;; *whatis)   do_whatis "$@" ;; *)          do_man "$@" ;; esac
+
+```
+````
 ---
 
 ## Your first approach below (first.txt)
